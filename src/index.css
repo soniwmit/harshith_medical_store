@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --medical-blue: #0A58CA;
+    --medical-green: #0A8F6A;
+    --light-gray: #F8FAFC;
+    --ink: #0F172A;
+  }
+}
+
+.bento-card {
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .bento-card {
+  background-color: #1e293b;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.bento-card-hero {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+}
+
+.dark .bento-card-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);
+}
+
+.pill-bento {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background-color: rgba(10, 143, 106, 0.12);
+  color: #0a8f6a;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.dark .pill-bento {
+  background-color: rgba(10, 143, 106, 0.25);
+  color: #34d399;
+}
+
+.icon-circle-bento {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  margin-bottom: 12px;
+}
+
+.dark .icon-circle-bento {
+  background-color: #334155;
+}
