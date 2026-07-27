@@ -151,7 +151,15 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Legal & Copyright Bar */}
         <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p className="text-center md:text-left">
-            © {new Date().getFullYear()} <strong className="text-slate-300 font-semibold">{BUSINESS_INFO.name}</strong>. All Rights Reserved.
+            © {new Date().getFullYear()} <strong className="text-slate-300 font-semibold">{BUSINESS_INFO.name}</strong>. All Rights Reserved. Developed by{' '}
+            <a
+              href="https://main.webmakerit.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0A8F6A] dark:text-emerald-400 hover:underline font-bold"
+            >
+              WMIT
+            </a>
           </p>
 
           <div className="flex items-center gap-4 flex-wrap justify-center font-medium">

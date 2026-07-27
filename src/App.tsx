@@ -19,6 +19,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
+import { useTracker } from './hooks/useTracker';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
@@ -27,6 +28,9 @@ export default function App() {
   const [prefilledMedicine, setPrefilledMedicine] = useState<string>('');
   const [isSearchModalOpen, setIsSearchModalOpen] = useState<boolean>(false);
   const [legalModalType, setLegalModalType] = useState<'privacy' | 'terms' | 'disclaimer' | null>(null);
+
+  // Global tracking hook for all SPA pages
+  useTracker(currentPage);
 
   // Apply dark mode class to html document
   useEffect(() => {
@@ -39,6 +43,7 @@ export default function App() {
 
   const handleNavigate = (page: PageId) => {
     setCurrentPage(page);
+    window.history.pushState({ page }, '', page === 'home' ? '/' : '/' + page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
