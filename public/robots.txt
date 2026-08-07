@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harshith-medical-store.vercel.app/sitemap.xml

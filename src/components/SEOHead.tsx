@@ -13,7 +13,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   keywords,
-  canonicalUrl = 'https://harshithmedicalstore.com',
+  canonicalUrl = 'https://harshith-medical-store.vercel.app',
   pageType = 'home',
 }) => {
   const defaultTitle = `${BUSINESS_INFO.name} | Pharmacy in Kinjar - Kurtha Rd, Motipur, Bihar`;
